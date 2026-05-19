@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker | Variant 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Task Tracker</h1>
+        <p>Практична робота 7 — Масиви, Варіант 3</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Додати нове завдання</h2>
+
+            <form id="taskForm" class="form">
+                <input 
+                    type="text" 
+                    id="taskTitle" 
+                    placeholder="Назва завдання" 
+                    required
+                >
+
+                <select id="taskPriority" required>
+                    <option value="">Оберіть пріоритет</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+
+                <select id="taskStatus" required>
+                    <option value="">Оберіть статус</option>
+                    <option value="pending">Очікує</option>
+                    <option value="in-progress">У процесі</option>
+                    <option value="done">Виконано</option>
+                </select>
+
+                <input 
+                    type="date" 
+                    id="taskDate" 
+                    required
+                >
+
+                <button type="submit">Додати завдання</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Фільтрація</h2>
+
+            <div class="filters">
+                <select id="priorityFilter">
+                    <option value="all">Усі пріоритети</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+
+                <select id="statusFilter">
+                    <option value="all">Усі статуси</option>
+                    <option value="pending">Очікує</option>
+                    <option value="in-progress">У процесі</option>
+                    <option value="done">Виконано</option>
+                </select>
+
+                <button id="resetFilters">Скинути фільтри</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Статистика</h2>
+
+            <div class="stats">
+                <div>
+                    <strong id="totalTasks">0</strong>
+                    <span>Усього</span>
+                </div>
+
+                <div>
+                    <strong id="doneTasks">0</strong>
+                    <span>Виконано</span>
+                </div>
+
+                <div>
+                    <strong id="inProgressTasks">0</strong>
+                    <span>У процесі</span>
+                </div>
+
+                <div>
+                    <strong id="pendingTasks">0</strong>
+                    <span>Очікує</span>
+                </div>
+
+                <div>
+                    <strong id="overdueTasks">0</strong>
+                    <span>Прострочено</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Список завдань</h2>
+            <div id="taskList" class="task-list"></div>
+        </section>
+
+        <section class="card">
+            <h2>Демонстрація функцій трансформації масивів</h2>
+
+            <div class="array-demo">
+                <button id="runArrayDemo">Запустити демонстрацію</button>
+                <pre id="arrayResult"></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>JavaScript Arrays Practice | Variant 3</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
